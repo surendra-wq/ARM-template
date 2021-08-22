@@ -1,0 +1,49 @@
+creating an azure function using Azure portal
+----------------------------------------------
+
+* Launch azure functions from all services
+* our function app is ready and deployed, but it is not usable as we have no cade written
+* Let's try to create our first azure function.
+
+     * Launch Azure Functions from All Services
+                    
+             * subscription (select subscription)
+             * Resource group (create resource group)
+
+
+         Instance details:[
+             Function App name : first function
+            pubish: code, docker (select code)
+            Runtimestack : .NET
+            Version: 3.1
+            Region: East US (Any region)
+
+                                     NEXT HOSTING (select)
+  
+                                     
+           HOSTING :{
+               Storage Account : create new ( storage func)
+               operating system : Linux or windows
+               Plan : Plan type == consumption serrverless
+           }                          
+               click on Review + create
+               
+                    create ( Go to resource )
+
+
+         ]
+        Now Our Function app is ready and deployed, but it is not usable as we have no code written
+        Lets try to create our first azure function.
+
+        Function :{
+            select on functions and than click on create
+             * select development environment
+               *click on develop in portal
+               * select template : HTTP Trigger
+               * click on create
+
+               Now ou can see code run in json format
+                 CODE+TEST : Than click oon RUn
+
+         Now you can see HTTP respoonse content : Hello azure this http triggered functionexecuted successfully.
+                 
