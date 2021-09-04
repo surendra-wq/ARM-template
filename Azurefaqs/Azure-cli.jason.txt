@@ -1,0 +1,25 @@
+# Create a resource group
+
+az group create --location 'eastus' --name 'aus-rg'
+
+# Create a v-net in resource group
+
+az network vnet create --name 'aus' --resource-group 'aus-rg' --address-prefixes '192.168.0.0/16'
+
+#  Create a subnet in v-net
+
+az network vnet subnet create --name 'appgateway' --address-prefixes '192.168.0.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
+
+# Crete a subnet in v-net
+
+az network vnet subnet create --name 'management' --address-prefixes '192.168.1.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
+
+# Create a 4 subnets and each subnet should provide network to 500 virtual machines
+
+az network vnet subnet create --name 'web' --address-prefixes '192.168.2.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
+
+az network vnet subnet create --name 'business' --address-prefixes '192.168.3.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
+
+az network vnet subnet create --name 'data' --address-prefixes '192.168.4.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
+
+az network vnet subnet create --name 'ad' --address-prefixes '192.168.5.0/24' --resource-group 'aus-rg' --vnet-name 'aus'
